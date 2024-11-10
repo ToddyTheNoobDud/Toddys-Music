@@ -91,12 +91,7 @@ var Classic = async (option) => {
                 <rect width="1568" height="512" rx="50" fill="#070707" fill-opacity="${option.imageDarkness / 100}"/>
                 <rect y="565" width="1568" height="272" rx="50" fill="#070707" fill-opacity="${option.imageDarkness / 100}"/>
                 </svg>`);
-      const image = await cropImage({
-        imagePath: option.backgroundImage,
-        width: 1568,
-        height: 837,
-        cropCenter: true
-      });
+      const image = await loadImage(option.backgroundImage);
       await cropImage({
         imagePath: image,
         x: 0,
@@ -149,9 +144,9 @@ var Classic = async (option) => {
   ctx.font = "50px semibold";
   ctx.fillText(option.endTime, 1332, 768);
   const buffer = await canvas.encode("png");
-  canvas.dispose();
   return buffer;
 };
 export {
   Classic
 };
+//# sourceMappingURL=index.mjs.map

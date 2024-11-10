@@ -1,6 +1,6 @@
 {
   "name": "toddys-music",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "An musicard for my bot... or for everyone",
   "main": "dist/index.mjs",
   "module": "dist/index.mjs",
